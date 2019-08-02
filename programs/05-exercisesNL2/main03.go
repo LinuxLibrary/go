@@ -10,6 +10,7 @@ const (
 )
 
 func main() {
+	fmt.Println("Declare and print Untyped and typed constant")
 	fmt.Println(a)
 	fmt.Println(b)
 }
