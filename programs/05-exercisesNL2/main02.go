@@ -5,6 +5,7 @@ import (
 )
 
 func main() {
+	fmt.Println("Boolean comparisions using ==, <=, >=, !=, <, >")
 	a := (42 == 42)
 	b := (42 >= 42)
 	c := (42 <= 42)
