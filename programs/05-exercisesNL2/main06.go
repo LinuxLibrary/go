@@ -12,6 +12,7 @@ const (
 )
 
 func main() {
+	fmt.Println("Print last 4 years using the iota constant.")
 	fmt.Println(a)
 	fmt.Println(b)
 	fmt.Println(c)
