@@ -6,11 +6,13 @@ DIFFOUT=$(diff -r $GOSRCDIR $GHPROGDIR | sed -e 's/Only in //g;s/: /\//g;s/\.\//
 
 if [[ -n $DIFFOUT ]]
 then
-	for FILE in $DIFFOUT
-	do
-		DESTFILE="$GHPROGDIR/$(echo $FILE | awk -F'src/' '{print $2}')"
-		cp -prv $FILE $DESTFILE
-	done
+#	for FILE in $DIFFOUT
+#	do
+#		DESTFILE="$GHPROGDIR/$(echo $FILE | awk -F'src/' '{print $2}')"
+#		cp -prv $FILE $DESTFILE
+#	done
+
+	rsync -avu --delete $GOSRCDIR/* $GHPROGDIR/
 	cd /GitHub/go
 	gitadd
 else
